@@ -9,8 +9,7 @@
     font-display: swap;
   }
 }
-// тут были подключен шрифт Jost, ипользуется вес на макете 400, 600, 700.
+
 @include font-face('Jost', '../assets/fonts/Jost/Jost-Regular', 400);
 @include font-face('Jost', '../assets/fonts/Jost/Jost-SemiBold', 600);
 @include font-face('Jost', '../assets/fonts/Jost/Jost-Bold', 700);
-
