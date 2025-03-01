@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.header--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+
+.header-main {
+  background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.about--nav ul {
+  display: flex;
+  grid-gap: 40px;
+
+  a {
+    color: $secondary-color;
+    font-size: 20px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

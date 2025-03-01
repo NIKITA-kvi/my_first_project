@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+.footer--main {
+  background-color: $primary-color;
+}
+
+.footer--block {
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.copyright {
+  color: $secondary-color;
+  font-size: 16px;
+  opacity: 70%;
+}
+
+.main {
+  flex: 1;
+}
