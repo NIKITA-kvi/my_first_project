@@ -10,7 +10,7 @@ body {
   color: $text-color-primary;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .container {
@@ -21,20 +21,19 @@ body {
 
   &--wide {
     max-width: 1720px;
-    margin: 0 auto;
   }
 }
 
 .logo {
   font-size: 30px;
   font-weight: 700;
-  color: $secondary-color;
+  color: $logo-color-primary;
 }
 
-.tel {
+.phone {
   font-size: 30px;
   font-weight: 600;
-  color: $secondary-color;
+  color: $phone-color-primary;
 }
 
 section {
@@ -54,3 +53,8 @@ section {
   background-color: $controls-bg-primary;
   color: $controls-color-primary;
 }
+
+.main {
+  flex: 1;
+}
+

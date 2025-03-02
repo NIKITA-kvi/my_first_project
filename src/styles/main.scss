@@ -1,5 +1,7 @@
 @use 'reset';
 @use 'variables';
 @use 'global';
-@use 'header';
-@use 'footer';
+@use './blocks/header';
+@use './blocks/footer';
+@use 'fonts';
+

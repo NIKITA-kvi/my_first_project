@@ -1,29 +1,32 @@
-@use 'variables' as *;
+@use '../variables' as *;
 
-.header--nav {
+.header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 80px;
 }
 
-.header-main {
+.header {
   background-color: $primary-color;
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 0 20px;
 }
 
-.about--nav ul {
-  display: flex;
-  grid-gap: 40px;
-
-  a {
-    color: $secondary-color;
-    font-size: 20px;
+.header__menu {
+  ul {
+    display: flex;
+    grid-gap: 40px;
   }
 
-  a:hover {
+  &-link {
+    font-size: 20px;
+    color: $link-color-primary;
+  }
+
+  &-link:hover {
     text-decoration: underline;
   }
 }
