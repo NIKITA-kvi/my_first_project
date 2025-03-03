@@ -1,32 +1,31 @@
 @use '../variables' as *;
 
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 80px;
-}
-
 .header {
-  background-color: $primary-color;
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0 20px;
-}
-
-.header__menu {
-  ul {
+  background-color: $primary-color;
+  
+  &__nav {
     display: flex;
-    grid-gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
   }
 
-  &-link {
-    font-size: 20px;
-    color: $link-color-primary;
-  }
+  &__menu {
+    ul {
+      display: flex;
+      grid-gap: 40px;
+    }
 
-  &-link:hover {
-    text-decoration: underline;
+    &-link {
+      font-size: 20px;
+      color: $link-color;
+    }
+
+    &-link:hover {
+      text-decoration: underline;
+    }
   }
 }

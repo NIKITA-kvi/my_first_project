@@ -1,6 +1,9 @@
 @use 'variables' as *;
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
   min-width: 320px;
   margin: 0;
   font-family: $font-main;
@@ -8,42 +11,28 @@ body {
   line-height: 1.6;
   background-color: $secondary-color;
   color: $text-color-primary;
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
 }
 
 .container {
+  max-width: 1300px;
   margin: 0 auto;
-  max-width: 1160px;
   width: 100%;
   height: 100%;
+  padding: 0 20px;
 
   &--wide {
     max-width: 1720px;
   }
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: 700;
-  color: $logo-color-primary;
-}
-
-.phone {
-  font-size: 30px;
-  font-weight: 600;
-  color: $phone-color-primary;
-}
-
-section {
-  padding: 120px 0;
+.main {
+  flex: 1;
 }
 
 .btn {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 25px 54px;
   font-size: 18px;
   font-weight: 400;
@@ -54,6 +43,14 @@ section {
   color: $controls-color-primary;
 }
 
-.main {
-  flex: 1;
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: $link-color;
+}
+
+.phone {
+  font-size: 30px;
+  font-weight: 600;
+  color: $link-color;
 }
