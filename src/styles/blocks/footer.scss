@@ -8,9 +8,9 @@
     justify-content: space-between;
     min-height: 120px;
     padding-top: 20px;
+  }
 
-    &-text {
-      color: $copyright-color;
-    }
+  &__copyright {
+    color: $copyright-text-color;
   }
 }

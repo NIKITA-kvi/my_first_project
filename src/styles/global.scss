@@ -11,14 +11,14 @@ body {
   line-height: 1.6;
   background-color: $secondary-color;
   color: $text-color-primary;
+  min-height: 100dvh;
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 0 20px;
 
   &--wide {
     max-width: 1720px;
@@ -27,6 +27,10 @@ body {
 
 .main {
   flex: 1;
+}
+
+.section {
+  padding: 120px 0;
 }
 
 .btn {
@@ -46,11 +50,11 @@ body {
 .logo {
   font-size: 30px;
   font-weight: 700;
-  color: $link-color;
+  color: $controls-color-primary;
 }
 
 .phone {
   font-size: 30px;
   font-weight: 600;
-  color: $link-color;
+  color: $controls-color-primary;
 }

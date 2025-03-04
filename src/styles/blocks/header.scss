@@ -21,11 +21,11 @@
 
     &-link {
       font-size: 20px;
-      color: $link-color;
-    }
+      color: $controls-color-primary;
 
-    &-link:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
