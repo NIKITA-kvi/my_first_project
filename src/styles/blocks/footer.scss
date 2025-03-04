@@ -2,12 +2,12 @@
 
 .footer {
   background-color: $primary-color;
+  padding: 42.5px 0;
 
   &__content {
     display: flex;
     justify-content: space-between;
-    min-height: 120px;
-    padding-top: 20px;
+    gap: 10px;
   }
 
   &__copyright {
