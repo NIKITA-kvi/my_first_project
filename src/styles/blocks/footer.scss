@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+.footer {
+  background-color: $primary-color;
+  padding: 40px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__copyright {
+    color: $text-color-secondary;
+    padding: 5px 0 0;
+  }
+}

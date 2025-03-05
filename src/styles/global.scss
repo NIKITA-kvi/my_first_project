@@ -1,36 +1,33 @@
 @use 'variables' as *;
 
 body {
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
   min-height: 100dvh;
+  min-width: 320px;
   margin: 0;
   font-family: $font-main;
   font-weight: 400;
   line-height: 1.6;
   background-color: $secondary-color;
   color: $text-color-primary;
+  min-height: 100dvh;
 }
 
 .container {
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 1160px;
   width: 100%;
   height: 100%;
+  padding: 0 20px;
 
   &--wide {
-    max-width: 1720px;
-    margin: 0 auto;
+    max-width: 1760px;
   }
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.tel {
-  font-size: 30px;
-  font-weight: 600;
+.main {
+  flex: 1;
 }
 
 section {
@@ -39,8 +36,8 @@ section {
 
 .btn {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 25px 54px;
   font-size: 18px;
   font-weight: 400;
@@ -48,5 +45,17 @@ section {
   border: none;
   cursor: pointer;
   background-color: $controls-bg-primary;
+  color: $controls-color-primary;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: $controls-color-primary;
+}
+
+.phone {
+  font-size: 30px;
+  font-weight: 600;
   color: $controls-color-primary;
 }
