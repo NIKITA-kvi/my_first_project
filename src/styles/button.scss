@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 54px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: $controls-bg-primary;
+  color: $controls-color-primary;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn__form {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 183px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: $controls-bg-secondary;
+  color: $controls-color-primary;
+}
