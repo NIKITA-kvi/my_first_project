@@ -10,9 +10,9 @@ $bg-color-secondary: $primary-color;
 
 $text-color-primary: $primary-color;
 $text-color-secondary: #b8b7bd;
-$text-color-tertiary: #ffffff;
+$text-color-tertiary: $secondary-color;
 
 $controls-bg-primary: $accent-color;
+$controls-bg-secondary-hover: #bc0202;
 $controls-bg-secondary: $primary-color;
 $controls-color-primary: $secondary-color;
-$controls-bg-secondary-hover: #490303;
