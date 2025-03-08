@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 54px;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: $controls-bg-primary;
+  color: $controls-color-primary;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $controls-bg-primary-hover;
+  }
+
+  &--dark {
+    background-color: $controls-bg-secondary;
+
+    &:hover {
+      background-color: $controls-bg-secondary-hover;
+    }
+  }
+}

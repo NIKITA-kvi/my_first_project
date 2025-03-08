@@ -1,1 +1,34 @@
 @use '../variables' as *;
+
+.promo {
+  position: relative;
+  height: calc(100dvh - 108px);
+  max-height: 972px;
+  overflow: hidden;
+  background-color: $bg-color-secondary;
+
+  &__image {
+    position: absolute;
+    height: auto;
+    width: 783px;
+    top: 53px;
+    left: 48%;
+  }
+
+  &__text {
+    padding-top: 116px;
+
+    &-title {
+      font-size: 70px;
+      font-weight: 600;
+      color: $text-color-tertiary;
+    }
+
+    &-descr {
+      max-width: 478px;
+      padding: 10px 0 40px 0;
+      font-size: 20px;
+      color: $text-color-tertiary;
+    }
+  }
+}
