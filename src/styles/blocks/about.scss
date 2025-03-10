@@ -7,26 +7,26 @@
     font-size: 30px;
   }
 
-  &__items {
+  &__item {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+  }
 
-    .about__item {
-      flex-basis: 260px;
+  .about-item {
+    flex-basis: 260px;
 
-      &-number {
-        font-size: 70px;
-        font-weight: 600;
-        word-break: keep-all;
-        color: $accent-color;
-      }
+    &__number {
+      font-size: 70px;
+      font-weight: 600;
+      word-break: keep-all;
+      color: $accent-color;
+    }
 
-      &-text {
-        font-size: 18px;
-        color: $text-color-quaternary;
-      }
+    &__text {
+      font-size: 18px;
+      color: $text-color-quaternary;
     }
   }
 }
