@@ -1,0 +1,32 @@
+@use '../variables' as *;
+
+.about {
+  &__school {
+    max-width: 891px;
+    margin-bottom: 60px;
+    font-size: 30px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .about-item {
+    flex-basis: 260px;
+
+    &__number {
+      font-size: 70px;
+      font-weight: 600;
+      word-break: keep-all;
+      color: $accent-color;
+    }
+
+    &__text {
+      font-size: 18px;
+      color: $text-color-quaternary;
+    }
+  }
+}
