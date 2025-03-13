@@ -1,0 +1,97 @@
+@use '../variables' as *;
+
+.teachers__slider {
+  .teachers__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    .teacher-wrapper {
+      &__title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #141024;
+      }
+
+      &__text {
+        font-size: 18px;
+        color: black;
+        font-weight: inherit;
+      }
+
+      &__btn {
+        font-size: 18px;
+        font-weight: inherit;
+        color: red;
+
+        &:hover {
+          text-decoration: underline;
+          color: grenn;
+        }
+      }
+    }
+  }
+}
+
+// .teachers__slider {
+
+//     .teachers__wrapper {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-wrap: nowrap;
+//         gap: 20px;
+//     }
+// .teachers-wrapper {
+//     &__title {
+//         font-size: 24px;
+//         font-weight: 600;
+//         color: #141024;
+//     }
+
+//     &__text {
+//         font-size: 18px;
+//         color: black;
+//         font-weight: inherit;
+//     }
+
+//     &__btn {
+//         font-size: 18px;
+//         font-weight: inherit;
+//         color: red;
+
+//         &:hover {
+//             text-decoration: underline;
+//             color: grenn;
+//         }
+//     }
+// }
+
+// }
+
+// .teachers-wrapper {
+//     &__title {
+//         font-size: 24px;
+//         font-weight: 600;
+//         color: #141024;
+//     }
+
+//     &__text {
+//         font-size: 18px;
+//         color: black;
+//         font-weight: inherit;
+//     }
+
+//     &__btn {
+//         font-size: 18px;
+//         font-weight: inherit;
+//         color: red;
+
+//         &:hover {
+//             text-decoration: underline;
+//             color: grenn;
+//         }
+//     }
+// }
