@@ -20,55 +20,52 @@
   .benefit-item {
     flex-basis: 360px;
 
-    &__tl {
-      display: flex;
-      align-items: center;
-    }
-
     &__title {
+      margin-bottom: 50px;
       font-size: 24px;
       font-weight: 600;
       color: $text-color-primary;
     }
 
     &__text {
-      margin-top: 50px;
       font-size: 18px;
       color: $text-color-quaternary;
     }
-  }
 
-  .tooltip {
-    position: relative;
-    display: inline-block;
-    min-height: 24px;
-    min-width: 24px;
-
-    &__icon {
-      position: absolute;
-      bottom: 50%;
-      left: 40%;
+    .tooltip {
+      position: relative;
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
       padding-top: 10px;
-    }
 
-    &__text {
-      position: absolute;
-      bottom: 200%;
-      left: 7%;
-      min-width: 251px;
-      padding: 15px;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      display: none;
-      border-radius: 10px;
-      background-color: $bg-color-primary;
-      color: $text-color-primary;
-      box-shadow: $shadow-light;
-    }
+      &__icon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
 
-    &:hover .tooltip__text {
-      display: block;
+      &__text {
+        max-width: 251px;
+        width: max-content;
+        position: absolute;
+        bottom: 170%;
+        left: 0;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 400; // перебирает вес от родителя benefit-item__title , inherit тоже не работает поэтому я написал вручную //
+        border-radius: 10px;
+        text-align: center;
+        border-radius: 10px;
+        display: none;
+        background-color: $bg-color-primary;
+        color: $text-color-primary;
+        box-shadow: $shadow-light;
+      }
+
+      &:hover .tooltip__text {
+        display: block;
+      }
     }
   }
 }
