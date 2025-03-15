@@ -31,41 +31,41 @@
       font-size: 18px;
       color: $text-color-quaternary;
     }
+  }
+}
 
-    .tooltip {
-      position: relative;
-      display: inline-flex;
-      width: 24px;
-      height: 24px;
-      padding-top: 10px;
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  bottom: 20px;
+  left: 0;
 
-      &__icon {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
+  &__icon {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+  }
 
-      &__text {
-        max-width: 251px;
-        width: max-content;
-        position: absolute;
-        bottom: 170%;
-        left: 0;
-        padding: 15px;
-        font-size: 16px;
-        font-weight: 400; // перебирает вес от родителя benefit-item__title , inherit тоже не работает поэтому я написал вручную //
-        border-radius: 10px;
-        text-align: center;
-        border-radius: 10px;
-        display: none;
-        background-color: $bg-color-primary;
-        color: $text-color-primary;
-        box-shadow: $shadow-light;
-      }
+  &__text {
+    max-width: 251px;
+    width: max-content;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    background-color: $bg-color-primary;
+    color: $text-color-primary;
+    box-shadow: $shadow-light;
+  }
 
-      &:hover .tooltip__text {
-        display: block;
-      }
-    }
+  &:hover .tooltip__text {
+    display: block;
   }
 }
