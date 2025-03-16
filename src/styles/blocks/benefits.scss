@@ -1,0 +1,71 @@
+@use '../variables' as *;
+
+.benefits {
+  background-color: $bg-color-tertiary;
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 600;
+    color: $text-color-primary;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .benefit-item {
+    flex-basis: 360px;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+      color: $text-color-primary;
+    }
+
+    &__text {
+      margin-top: 20px;
+      font-size: 18px;
+      color: $text-color-quaternary;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  bottom: 20px;
+  left: 0;
+
+  &__icon {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+  }
+
+  &__text {
+    max-width: 251px;
+    width: max-content;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    background-color: $bg-color-primary;
+    color: $text-color-primary;
+    box-shadow: $shadow-light;
+  }
+
+  &:hover .tooltip__text {
+    display: block;
+  }
+}
