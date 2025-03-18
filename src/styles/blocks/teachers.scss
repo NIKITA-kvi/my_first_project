@@ -23,11 +23,10 @@
         scrollbar-width: none;
       }
     }
+  }
 
-    &__item {
-      flex-basis: 360px;
-      min-width: 360px;
-    }
+  .teachers-card {
+    flex: 1 0 360px;
 
     &__image {
       height: 500px;
@@ -50,7 +49,7 @@
       color: $text-color-quaternary;
     }
 
-    &__button {
+    &__btn {
       margin-top: 20px;
       font-size: 18px;
       color: $controls-bg-primary;
@@ -64,13 +63,13 @@
         color: $primary-color;
       }
     }
+  }
 
-    &__controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 60px;
-    }
+  .teachers-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
 
     &__scrollbar {
       width: 360px;
@@ -92,13 +91,17 @@
       gap: 10px;
     }
 
-    &__button:hover {
-      transform: scale(1.2);
-      transition: transform 0.5s ease;
+    &__button {
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 0.5s ease;
 
-      &:active {
-        transform: scale(0.95);
+        &:active {
+          transform: scale(0.95);
+        }
       }
     }
   }
 }
+
+
