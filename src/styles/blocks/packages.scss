@@ -1,0 +1,88 @@
+@use '../variables' as *;
+
+.packages {
+  &__title {
+    font-size: 50px;
+    font-weight: 600;
+    color: $text-color-primary;
+  }
+  .packages__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  .package-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 360px;
+    padding: 40px 40px;
+    border-radius: 20px;
+    border: 1px solid $border-color-primary;
+    background-color: $bg-color-primary;
+    transition:
+      transform 0.6s ease,
+      background-color 0.5s ease,
+      box-shadow 0.5s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      background-color: $bg-color-secondary;
+      box-shadow: $shadow-light;
+    }
+
+    &:hover .package-card__name,
+    &:hover .package-card__price,
+    &:hover .package-card__description {
+      color: $text-color-tertiary;
+    }
+
+    &__name {
+      position: relative;
+      margin-bottom: 63px;
+      font-size: 30px;
+      font-weight: 600;
+      color: $text-color-primary;
+
+      &::before,
+      &::after {
+        content: '\2014';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+
+      &::before {
+        left: -35px;
+      }
+
+      &::after {
+        right: -35px;
+      }
+    }
+
+    &__price {
+      margin-bottom: 20px;
+      font-size: 50px;
+      font-weight: 600;
+      color: $text-color-primary;
+    }
+
+    &__description {
+      text-align: center;
+      margin-bottom: 52px;
+      max-width: 250px;
+      min-height: 58px;
+      font-size: 18px;
+      color: $text-color-primary;
+    }
+
+    &__button {
+      margin-top: auto;
+      min-width: 280px;
+    }
+  }
+}
