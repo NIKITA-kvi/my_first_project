@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-basis: 360px;
     min-width: 360px;
     padding: 40px 40px;
     border-radius: 20px;
@@ -74,7 +75,7 @@
     &__description {
       text-align: center;
       margin-bottom: 52px;
-      max-width: 250px;
+      min-width: 250px;
       min-height: 58px;
       font-size: 18px;
       color: $text-color-primary;
@@ -82,7 +83,7 @@
 
     &__button {
       margin-top: auto;
-      min-width: 280px;
+      align-self: stretch;
     }
   }
 }
