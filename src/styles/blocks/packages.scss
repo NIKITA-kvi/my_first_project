@@ -1,7 +1,6 @@
 @use '../variables' as *;
 
 .packages {
-
   &__title {
     font-size: 50px;
     font-weight: 600;
@@ -71,7 +70,7 @@
       color: $text-color-primary;
     }
 
-    &__description {  
+    &__description {
       display: inline-flex;
       justify-content: center;
       text-align: center;
@@ -89,4 +88,3 @@
     }
   }
 }
-
