@@ -10,7 +10,7 @@
   &__cards {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 40px;
     margin-top: 80px;
@@ -32,12 +32,12 @@
     &:hover {
       transform: scale(1.02);
       background-color: $bg-color-secondary;
-    }
 
-    &:hover .package-card__name,
-    &:hover .package-card__price,
-    &:hover .package-card__description {
-      color: $text-color-tertiary;
+      .package-card__name,
+      .package-card__price,
+      .package-card__description {
+        color: $text-color-tertiary;
+      }
     }
 
     &__name {
@@ -64,20 +64,16 @@
     }
 
     &__price {
-      margin-top: 63px;
+      margin-top: 83px;
       font-size: 50px;
       font-weight: 600;
       color: $text-color-primary;
     }
 
     &__description {
-      display: inline-flex;
-      justify-content: center;
-      text-align: center;
-      flex-basis: 58px;
       width: 100%;
       text-align: center;
-      margin: 20px 0 60px;
+      margin: 20px 0 55px;
       font-size: 18px;
       color: $text-color-primary;
     }
