@@ -4,8 +4,8 @@
   background-color: $bg-color-quaternary;
   background-image: url('../assets/images/background__image.png');
   background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__content {
     display: flex;
@@ -38,7 +38,6 @@
   }
 
   .enroll-field {
- 
     &__input {
       width: 100%;
       padding: 10px;
