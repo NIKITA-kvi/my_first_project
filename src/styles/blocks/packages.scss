@@ -1,0 +1,87 @@
+@use '../variables' as *;
+
+.packages {
+  padding-top: 0;
+  &__title {
+    font-size: 50px;
+    font-weight: 600;
+    color: $text-color-primary;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  .package-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 360px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid $border-color-primary;
+    background-color: $bg-color-primary;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      background-color: $bg-color-secondary;
+
+      .package-card__name,
+      .package-card__price,
+      .package-card__description {
+        color: $text-color-tertiary;
+      }
+    }
+
+    &__name {
+      position: relative;
+      font-size: 30px;
+      font-weight: 600;
+      color: $text-color-primary;
+
+      &::before,
+      &::after {
+        content: '\2014';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+
+      &::before {
+        left: -35px;
+      }
+
+      &::after {
+        right: -35px;
+      }
+    }
+
+    &__price {
+      margin-top: 83px;
+      font-size: 50px;
+      font-weight: 600;
+      color: $text-color-primary;
+    }
+
+    &__description {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0 55px;
+      font-size: 18px;
+      color: $text-color-primary;
+    }
+
+    &__button {
+      margin-top: auto;
+      align-self: stretch;
+    }
+  }
+}
