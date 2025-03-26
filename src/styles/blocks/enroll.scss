@@ -37,10 +37,6 @@
     max-width: 500px;
     flex: 1 1 0;
     gap: 10px;
-
-    &-btn {
-      padding: 18px;
-    }
   }
 
   .enroll-field {
@@ -60,5 +56,9 @@
       margin: -1px;
       overflow: hidden;
     }
+  }
+
+  &__form-btn {
+    padding: 18px;
   }
 }
