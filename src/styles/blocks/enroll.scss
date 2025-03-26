@@ -9,15 +9,16 @@
 
   &__content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 144px;
+    padding: 0 50px;
+    gap: 20px;
   }
 
   .enroll-info {
+    max-width: 476px;
+
     &__title {
-      width: 90%;
-      max-width: 350px;
       font-size: 36px;
       font-weight: 600;
       color: $text-color-tertiary;
@@ -33,22 +34,23 @@
   .enroll__form {
     display: flex;
     flex-direction: column;
-    min-width: 500px;
+    max-width: 500px;
+    flex: 1 1 0;
     gap: 10px;
+
+    &-btn {
+      padding: 18px;
+    }
   }
 
   .enroll-field {
     &__input {
+      padding: 18px;
       width: 100%;
-      padding: 10px;
       font-size: 18px;
-      height: 64px;
+      line-height: inherit;
       background-color: $bg-color-primary;
       border-radius: 5px;
-
-      &:focus::placeholder {
-        color: transparent;
-      }
     }
 
     &__label {
