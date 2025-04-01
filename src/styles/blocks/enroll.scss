@@ -1,0 +1,64 @@
+@use '../variables' as *;
+
+.enroll {
+  background-color: $bg-color-quaternary;
+  background-image: url('../assets/images/background__image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    gap: 20px;
+  }
+
+  .enroll-info {
+    flex: 1 0 300px;
+
+    &__title {
+      font-size: 36px;
+      font-weight: 600;
+      color: $text-color-tertiary;
+    }
+
+    &__text {
+      font-size: 20px;
+      color: $text-color-tertiary;
+      margin-top: 20px;
+    }
+  }
+
+  .enroll__form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 500px;
+    gap: 10px;
+  }
+
+  .enroll-field {
+    &__input {
+      padding: 19px 0 19px 20px;
+      width: 100%;
+      font-size: 18px;
+      line-height: normal;
+      background-color: $bg-color-primary;
+      border-radius: 5px;
+    }
+
+    &__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+    }
+  }
+
+  &__form-btn {
+    line-height: normal;
+    padding: 19px 0;
+  }
+}
