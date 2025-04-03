@@ -9,13 +9,6 @@ const sliderScrollBar = document.querySelector('.teachers-controls__scrollbar');
 const sliderScrollBarThumb = document.querySelector('.teachers-controls__scrollbar-progress');
 const sliderButtons = document.querySelectorAll('.teachers-controls__button');
 
-// Шаг 2 тут я хочу удостоверится или правильно нашел элементы из DOM дерева
-
-console.log(sliderItems);
-console.log(sliderScrollBar);
-console.log(sliderScrollBarThumb);
-console.log(sliderButtons);
-
 let sliderMaxScrollLeft = sliderItems.scrollWidth - sliderItems.clientWidth;
 sliderButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -23,10 +16,8 @@ sliderButtons.forEach((button) => {
     let direction;
     if (button.id === 'btn-next') {
       direction = 1;
-      console.log('SLIDE-RIGHT');
     } else {
       direction = -1;
-      console.log('SLIDE-LEFT');
     }
 
     let scrollAmount = sliderItems.clientWidth + gap; // Слайд + отступ
