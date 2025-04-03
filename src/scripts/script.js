@@ -1,6 +1,6 @@
-const heading = document.querySelector('.heading');
+// const heading = document.querySelector('.heading');
 
-console.log(heading.innerHTML); // eslint-disable-line no-console
+// console.log(heading.innerHTML); // eslint-disable-line no-console
 
 // 1 шаг тут мне нужно получить элементы со страницы из DOM дерева и поместить их в переменную
 
