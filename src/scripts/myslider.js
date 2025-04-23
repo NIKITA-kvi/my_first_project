@@ -3,10 +3,6 @@ const slideButtons = document.querySelectorAll('.teachers-controls__button');
 const sliderScrollbar = document.querySelector('.teachers-controls__scrollbar');
 const scrollbarThumb = document.querySelector('.teachers-controls__scrollbar-progress');
 
-if (!imageList || !sliderScrollbar || !scrollbarThumb) {
-  return;
-}
-
 const updateMaxScrollLeft = () => {
   return imageList.scrollWidth - imageList.clientWidth;
 };
