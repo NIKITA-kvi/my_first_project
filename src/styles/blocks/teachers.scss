@@ -72,6 +72,7 @@
     margin-top: 60px;
 
     &__scrollbar {
+      position: relative;
       width: 360px;
       background-color: $controls-bg-tertiary;
       height: 5px;
@@ -79,10 +80,17 @@
     }
 
     &__scrollbar-progress {
+      position: absolute;
+      cursor: pointer;
       width: 260px;
       height: 100%;
       background-color: $controls-bg-secondary;
       border-radius: 10px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
     }
 
     &__buttons {
