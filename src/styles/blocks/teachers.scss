@@ -80,8 +80,8 @@
     }
 
     &__scrollbar-progress {
-      cursor: pointer;
       position: absolute;
+      cursor: pointer;
       width: 260px;
       height: 100%;
       background-color: $controls-bg-secondary;
