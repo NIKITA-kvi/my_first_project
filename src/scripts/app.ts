@@ -6,3 +6,6 @@ import '../styles/main.scss';
 
 // Импорт всех скриптов
 import './slider.js';
+import './form.js';
+
+
