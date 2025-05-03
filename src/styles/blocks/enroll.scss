@@ -39,6 +39,8 @@
   }
 
   .enroll-field {
+    position: relative;
+
     &__input {
       padding: 19px 0 19px 20px;
       width: 100%;
@@ -46,6 +48,13 @@
       line-height: normal;
       background-color: $bg-color-primary;
       border-radius: 5px;
+      box-sizing: border-box; /* Это свойство гарантирует, что бордер не изменит размер инпута */
+      border: 2px solid transparent; /* Устанавливаем начальный бордер (он прозрачный) */
+      transition: border-color 0.7s ease; /* Плавное изменение цвета границы */
+    }
+
+    &__input--invalid {
+      border-color: rgb(0, 6, 190); /* Меняем бордер на красный, если есть ошибка */
     }
 
     &__label {
