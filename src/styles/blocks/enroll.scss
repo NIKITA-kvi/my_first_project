@@ -48,13 +48,12 @@
       line-height: normal;
       background-color: $bg-color-primary;
       border-radius: 5px;
-      box-sizing: border-box; /* Это свойство гарантирует, что бордер не изменит размер инпута */
-      border: 2px solid transparent; /* Устанавливаем начальный бордер (он прозрачный) */
-      transition: border-color 0.7s ease; /* Плавное изменение цвета границы */
+      border: 3px solid transparent;
+      transition: border-color 0.7s ease;
     }
 
     &__input--invalid {
-      border-color: rgb(0, 6, 190); /* Меняем бордер на красный, если есть ошибка */
+      border-color: rgb(0, 0, 0);
     }
 
     &__label {
