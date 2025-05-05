@@ -15,9 +15,9 @@ console.log(form);
 // eslint-disable-next-line
 console.log(button);
 
-const nameRegex = new RegExp('^[А-Яа-яЁё\s]+$');
-const phoneRegex = new RegExp('^\\d+$');
-const emailRegex = new RegExp('^[^\\s@]+@[\\w-]+(\\.[\\w-]+)+$');
+const nameRegex = /^[А-Яа-яЁё\s]+$/;
+const phoneRegex = /^\d+$/;
+const emailRegex = /^[^\s@]+@[\w-]+(\.[\w-]+)+$/;
 
 let formState = {
   name: {
@@ -130,14 +130,6 @@ emailInput.addEventListener('input', (event) => {
     checkEmailInputValidity();
   }
 });
-
-const checkFormValidity = () => {
-  const isNameValid = checkNameInputValidity();
-  const isPhoneValid = checkPhoneInputValidity();
-  const isEmailValid = checkEmailInputValidity();
-
-  return isNameValid && isPhoneValid && isEmailValid;
-};
 
 const resetForm = () => {
   form.reset();
