@@ -267,35 +267,25 @@
             <p class="enroll-info__text">Акция действительна до 10 марта 2022 года</p>
           </div>
 
-          <form class="enroll__form enroll-form">
+          <form class="enroll__form enroll-form" id="form">
             <div class="enroll-form__field enroll-field">
               <label class="enroll-field__label" for="name"></label>
-              <input class="enroll-field__input" type="text" id="name" placeholder="Имя" required />
+              <input class="enroll-field__input" type="text" id="name" placeholder="Имя" />
             </div>
 
             <div class="enroll-form__field enroll-field">
               <label class="enroll-field__label" for="tel"></label>
-              <input
-                class="enroll-field__input"
-                type="tel"
-                id="tel"
-                placeholder="Телефон"
-                required
-              />
+              <input class="enroll-field__input" type="tel" id="phone" placeholder="Телефон" />
             </div>
 
             <div class="enroll-form__field enroll-field">
               <label class="enroll-field__label" for="e-mail"></label>
-              <input
-                class="enroll-field__input"
-                type="email"
-                id="e-mail"
-                placeholder="E-mail"
-                required
-              />
+              <input class="enroll-field__input" type="email" id="email" placeholder="E-mail" />
             </div>
 
-            <button type="submit" class="btn enroll__form-btn btn--dark">Оформить заявку</button>
+            <button id="submit-btn" type="submit" class="btn enroll__form-btn btn--dark">
+              Оформить заявку
+            </button>
           </form>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 .packages {
   padding-top: 0;
+
   &__title {
     font-size: 50px;
     font-weight: 600;
@@ -24,7 +25,7 @@
     flex-basis: 360px;
     padding: 40px;
     border-radius: 20px;
-    border: 1px solid $border-color-primary;
+    border: 1px solid $primary-color;
     background-color: $bg-color-primary;
     transition:
       transform 0.3s ease,
