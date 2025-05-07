@@ -140,11 +140,11 @@ const resetForm = () => {
 };
 
 const checkFormValidity = () => {
-  const isNameValid = checkNameInputValidity();
-  const isPhoneValid = checkPhoneInputValidity();
-  const isEmailValid = checkEmailInputValidity();
+  if (!checkNameInputValidity()) return false;
+  if (!checkPhoneInputValidity()) return false;
+  if (!checkEmailInputValidity()) return false;
 
-  return isNameValid && isPhoneValid && isEmailValid;
+  return true;
 };
 
 button.addEventListener('click', (e) => {
