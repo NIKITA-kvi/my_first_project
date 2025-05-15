@@ -1,16 +1,17 @@
-const infoBlock = document.querySelector('.modal__info-block');
-const scrollbarWrapper = document.querySelector('.modal__scrollbar');
-const scrollbarProgress = document.querySelector('.modal__scrollbar-progress');
-
-const modal = document.querySelector('.modal-overlay');
-const openModalBtn = document.querySelectorAll('.teachers-card__btn');
+const modal = document.querySelector('.modal');
+const modalBackDrop = document.querySelector('.modal__backdrop');
 const closeModalBtn = document.querySelector('.modal__close-btn');
-const tabButtons = document.querySelectorAll('.modal__button');
-const tabContents = document.querySelectorAll('.modal__info-content');
+const tabButtons = document.querySelectorAll('.teacher-block__button');
+const tabContents = document.querySelectorAll('.teacher-block__info-content');
+const openModalBtn = document.querySelectorAll('.teachers-card__btn');
+
+console.log(modalBackDrop);
 
 openModalBtn.forEach((button) => {
   button.addEventListener('click', () => {
     modal.classList.add('open');
+
+    document.body.style.overflow = 'hidden';
   });
 });
 
@@ -25,15 +26,15 @@ document.addEventListener('keydown', (escape) => {
 });
 
 modal.addEventListener('click', (event) => {
-  if (event.target === modal) {
+  if (event.target === modalBackDrop) {
     modal.classList.remove('open');
   }
 });
 
 tabButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    tabButtons.forEach((button) => {
-      button.classList.remove('active');
+    tabButtons.forEach((btn) => {
+      btn.classList.remove('active');
     });
     tabContents.forEach((content) => {
       content.classList.remove('active');
@@ -42,37 +43,8 @@ tabButtons.forEach((button) => {
     const tab = button.getAttribute('data-tab');
 
     button.classList.add('active');
-    document.querySelector(`.modal__info-content[data-tab="${tab}"]`).classList.add('active');
+    document
+      .querySelector(`.teacher-block__info-content[data-tab="${tab}"]`)
+      .classList.add('active');
   });
-});
-
-infoBlock.addEventListener('scroll', () => {
-  const scrollRatio = infoBlock.scrollTop / (infoBlock.scrollHeight - infoBlock.clientHeight);
-  const scrollbarHeight = scrollbarWrapper.clientHeight - scrollbarProgress.clientHeight;
-  scrollbarProgress.style.transform = `translateY(${scrollRatio * scrollbarHeight}px)`;
-});
-
-let isDragging = false;
-let startY;
-let startScrollTop;
-
-scrollbarProgress.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startY = e.clientY;
-  startScrollTop = infoBlock.scrollTop;
-  document.body.style.userSelect = 'none';
-});
-
-document.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  const deltaY = e.clientY - startY;
-  const scrollableHeight = infoBlock.scrollHeight - infoBlock.clientHeight;
-  const scrollbarHeight = scrollbarWrapper.clientHeight - scrollbarProgress.clientHeight;
-  const scrollRatio = deltaY / scrollbarHeight;
-  infoBlock.scrollTop = startScrollTop + scrollRatio * scrollableHeight;
-});
-
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-  document.body.style.userSelect = '';
 });

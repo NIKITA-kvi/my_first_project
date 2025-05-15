@@ -1,39 +1,66 @@
 @use '../variables' as *;
 
-.modal-overlay {
+.modal {
   position: fixed;
-  top: 0;
-  left: 0;
   inset: 0;
   width: 100vw;
   height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
   display: none;
-  background-color: $bg-color-modal-quinary;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 
   &.open {
     display: flex;
   }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: $bg-color-modal-quinary;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+    background-color: $bg-color-primary;
+    border-radius: 20px;
+    max-width: 940px;
+    max-height: 90vh;
+    padding: 40px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: $text-color-quaternary;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: $controls-bg-primary-hover;
+      transform: scale(1.03);
+    }
+  }
 }
 
-.modal {
+.teacher-block {
   display: flex;
   flex-direction: column;
-  max-width: 940px;
-  width: 100%;
-  max-height: 90vh;
-  background-color: $bg-color-primary;
-  padding: 40px;
-  border-radius: 40px;
-
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__teacher {
+    display: flex;
+    gap: 40px;
   }
 
   &__image {
@@ -42,11 +69,6 @@
     &:hover {
       transform: scale(1.1);
     }
-  }
-
-  &__teacher {
-    display: flex;
-    gap: 40px;
   }
 
   &__about {
@@ -71,71 +93,66 @@
 
     a {
       transition: transform 0.3s ease;
-    }
 
-    a:hover {
-      transform: scale(1.2);
-    }
-  }
-
-  &__close-btn {
-    cursor: pointer;
-    color: $text-color-quaternary;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      text-decoration: underline;
-      color: $controls-bg-primary-hover;
-      transform: scale(1.03);
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
   &__buttons {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-color-primary;
     margin-bottom: 20px;
-    max-width: 678px;
   }
 
   &__button {
+    display: flex;
+    flex: 0 1 33%;
+    padding: 20px 0;
     color: $text-color-primary;
     font-size: 20px;
+    cursor: pointer;
 
     &.active {
       color: $controls-bg-primary-hover;
     }
-  }
 
-  &__line {
-    background-color: $controls-bg-tertiary;
-    height: 1px;
-    border: none;
-    margin-bottom: 20px;
+    &:hover {
+      color: $controls-bg-primary-hover;
+    }
   }
 
   &__information {
+    position: relative;
     height: 355px;
-    display: flex;
-    justify-content: space-between;
     overflow: hidden;
-  }
 
-  &__info-content {
-    display: none;
-
-    &.active {
-      display: block;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 95%;
+      height: 50px;
+      background: linear-gradient(to bottom, rgba(232, 226, 226, 0) 0%, rgb(255, 255, 255) 100%);
+      filter: blur(1px);
+      pointer-events: none;
     }
   }
 
   &__info-block {
     height: 100%;
     overflow-y: auto;
-    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  }
 
-    &::-webkit-scrollbar {
-      display: none;
+  &__info-content {
+    width: 95%;
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 
@@ -155,25 +172,5 @@
   &__text {
     font-size: 20px;
     color: $text-color-primary;
-  }
-
-  &__scrollbar {
-    height: 345px;
-    background-color: $controls-bg-tertiary;
-    width: 5px;
-    border-radius: 10px;
-  }
-
-  &__scrollbar-progress {
-    cursor: pointer;
-    height: 175px;
-    width: 100%;
-    background-color: $controls-bg-secondary;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.03);
-    }
   }
 }
