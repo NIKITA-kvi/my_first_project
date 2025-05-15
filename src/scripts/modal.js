@@ -5,8 +5,6 @@ const tabButtons = document.querySelectorAll('.teacher-block__button');
 const tabContents = document.querySelectorAll('.teacher-block__info-content');
 const openModalBtn = document.querySelectorAll('.teachers-card__btn');
 
-console.log(modalBackDrop);
-
 openModalBtn.forEach((button) => {
   button.addEventListener('click', () => {
     modal.classList.add('open');
