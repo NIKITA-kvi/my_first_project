@@ -1,62 +1,8 @@
 @use '../variables' as *;
 
-.modal {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100dvh;
-  z-index: 1000;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-
-  &.open {
-    display: flex;
-  }
-
-  &__backdrop {
-    position: absolute;
-    inset: 0;
-    background-color: $bg-color-modal-quinary;
-    width: 100%;
-    height: 100%;
-  }
-
-  &__content {
-    position: relative;
-    background-color: $bg-color-primary;
-    border-radius: 20px;
-    max-width: 940px;
-    max-height: 90vh;
-    padding: 40px;
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    color: $text-color-quaternary;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-      color: $controls-bg-primary-hover;
-      transform: scale(1.03);
-    }
-  }
-}
-
-.teacher-block {
+.teacher-modal {
   display: flex;
   flex-direction: column;
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
 
   &__teacher {
     display: flex;
@@ -64,27 +10,14 @@
   }
 
   &__image {
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    width: 160px;
+    height: auto;
   }
 
   &__about {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-
-  &__title {
-    color: $text-color-primary;
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  &__subtitle {
-    color: $text-color-quaternary;
   }
 
   &__social {
@@ -100,11 +33,20 @@
     }
   }
 
+  &__title {
+    color: $text-color-primary;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: $text-color-quaternary;
+  }
+
   &__buttons {
     display: flex;
     align-items: center;
     border-bottom: 1px solid $border-color-primary;
-    margin-bottom: 20px;
   }
 
   &__button {
@@ -127,7 +69,8 @@
   &__information {
     position: relative;
     height: 355px;
-    overflow: hidden;
+    margin-top: 20px;
+    overflow: hidden; /* <- ограничивает псевдоэлемент по горизонтали */
 
     &::after {
       content: '';
@@ -142,12 +85,14 @@
     }
   }
 
-  &__info-block {
+  &__info-wrapper {
     height: 100%;
     overflow-y: auto;
+    padding-bottom: 25px;
   }
 
   &__info-content {
+    text-align: justify;
     width: 95%;
     display: none;
 
@@ -157,20 +102,26 @@
   }
 
   &__subsection-title {
+    display: inline-block;
     color: $text-color-primary;
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 20px;
-  }
-
-  &__text-first {
-    margin-bottom: 40px;
-    font-size: 20px;
-    color: $text-color-primary;
+    margin-top: 40px;
   }
 
   &__text {
     font-size: 20px;
     color: $text-color-primary;
+  }
+
+  &__text--top-margin {
+    margin-top: 20px;
+  }
+
+  &__title-text {
+    display: inline-block;
+    color: $text-color-primary;
+    font-size: 24px;
+    font-weight: 600;
   }
 }

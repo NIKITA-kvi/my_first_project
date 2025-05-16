@@ -1,8 +1,8 @@
 const modal = document.querySelector('.modal');
 const modalBackDrop = document.querySelector('.modal__backdrop');
 const closeModalBtn = document.querySelector('.modal__close-btn');
-const tabButtons = document.querySelectorAll('.teacher-block__button');
-const tabContents = document.querySelectorAll('.teacher-block__info-content');
+const tabButtons = document.querySelectorAll('.teacher-modal__button');
+const tabContents = document.querySelectorAll('.teacher-modal__info-content');
 const openModalBtn = document.querySelectorAll('.teachers-card__btn');
 
 openModalBtn.forEach((button) => {
@@ -15,18 +15,18 @@ openModalBtn.forEach((button) => {
 
 closeModalBtn.addEventListener('click', () => {
   modal.classList.remove('open');
+
+  document.body.style.overflow = 'visible';
 });
 
-document.addEventListener('keydown', (escape) => {
-  if (escape.key === 'Escape') {
+document.addEventListener('keydown', (keyDownEvent) => {
+  if (keyDownEvent.key === 'Escape' && modal.classList.contains('open')) {
     modal.classList.remove('open');
   }
 });
 
-modal.addEventListener('click', (event) => {
-  if (event.target === modalBackDrop) {
-    modal.classList.remove('open');
-  }
+modalBackDrop.addEventListener('click', () => {
+  modal.classList.remove('open');
 });
 
 tabButtons.forEach((button) => {
@@ -42,7 +42,7 @@ tabButtons.forEach((button) => {
 
     button.classList.add('active');
     document
-      .querySelector(`.teacher-block__info-content[data-tab="${tab}"]`)
+      .querySelector(`.teacher-modal__info-content[data-tab="${tab}"]`)
       .classList.add('active');
   });
 });
