@@ -1,33 +1,33 @@
 const modal = document.querySelector('.modal');
 const modalBackDrop = document.querySelector('.modal__backdrop');
 const closeModalBtn = document.querySelector('.modal__close-btn');
-const tabButtons = document.querySelectorAll('.teacher-modal__button');
-const tabContents = document.querySelectorAll('.teacher-modal__info-content');
+const tabButtons = document.querySelectorAll('.modal-buttons__button');
+const tabContents = document.querySelectorAll('.teacher-info-tab__content');
 const openModalBtn = document.querySelectorAll('.teachers-card__btn');
 
-openModalBtn.forEach((button) => {
-  button.addEventListener('click', () => {
-    modal.classList.add('open');
+const modalOpen = () => {
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
 
-    document.body.style.overflow = 'hidden';
-  });
-});
-
-closeModalBtn.addEventListener('click', () => {
+const modalClose = () => {
   modal.classList.remove('open');
+  document.body.style.overflow = 'auto';
+};
 
-  document.body.style.overflow = 'visible';
+openModalBtn.forEach((button) => {
+  button.addEventListener('click', modalOpen);
 });
+
+closeModalBtn.addEventListener('click', modalClose);
 
 document.addEventListener('keydown', (keyDownEvent) => {
   if (keyDownEvent.key === 'Escape' && modal.classList.contains('open')) {
-    modal.classList.remove('open');
+    modalClose();
   }
 });
 
-modalBackDrop.addEventListener('click', () => {
-  modal.classList.remove('open');
-});
+modalBackDrop.addEventListener('click', modalClose);
 
 tabButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -41,8 +41,6 @@ tabButtons.forEach((button) => {
     const tab = button.getAttribute('data-tab');
 
     button.classList.add('active');
-    document
-      .querySelector(`.teacher-modal__info-content[data-tab="${tab}"]`)
-      .classList.add('active');
+    document.querySelector(`.teacher-info-tab__content[data-tab="${tab}"]`).classList.add('active');
   });
 });

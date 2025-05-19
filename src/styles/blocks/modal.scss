@@ -1,127 +1,48 @@
 @use '../variables' as *;
 
-.teacher-modal {
-  display: flex;
-  flex-direction: column;
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 
-  &__teacher {
+  &.open {
     display: flex;
-    gap: 40px;
   }
 
-  &__image {
-    width: 160px;
-    height: auto;
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: $bg-color-quinary;
+    width: 100%;
+    height: 100%;
   }
 
-  &__about {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  &__content {
+    position: relative;
+    background-color: $bg-color-primary;
+    border-radius: 20px;
+    max-height: 90dvh;
+    padding: 40px;
   }
 
-  &__social {
-    display: flex;
-    gap: 10px;
-
-    a {
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  &__title {
-    color: $text-color-primary;
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  &__subtitle {
+  &__close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
     color: $text-color-quaternary;
-  }
-
-  &__buttons {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid $border-color-primary;
-  }
-
-  &__button {
-    display: flex;
-    flex: 0 1 33%;
-    padding: 20px 0;
-    color: $text-color-primary;
-    font-size: 20px;
+    transition: transform 0.3s ease;
     cursor: pointer;
 
-    &.active {
-      color: $controls-bg-primary-hover;
-    }
-
     &:hover {
+      text-decoration: underline;
       color: $controls-bg-primary-hover;
+      transform: scale(1.03);
     }
-  }
-
-  &__information {
-    position: relative;
-    height: 355px;
-    margin-top: 20px;
-    overflow: hidden; /* <- ограничивает псевдоэлемент по горизонтали */
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 95%;
-      height: 50px;
-      background: linear-gradient(to bottom, rgba(232, 226, 226, 0) 0%, rgb(255, 255, 255) 100%);
-      filter: blur(1px);
-      pointer-events: none;
-    }
-  }
-
-  &__info-wrapper {
-    height: 100%;
-    overflow-y: auto;
-    padding-bottom: 25px;
-  }
-
-  &__info-content {
-    text-align: justify;
-    width: 95%;
-    display: none;
-
-    &.active {
-      display: block;
-    }
-  }
-
-  &__subsection-title {
-    display: inline-block;
-    color: $text-color-primary;
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 40px;
-  }
-
-  &__text {
-    font-size: 20px;
-    color: $text-color-primary;
-  }
-
-  &__text--top-margin {
-    margin-top: 20px;
-  }
-
-  &__title-text {
-    display: inline-block;
-    color: $text-color-primary;
-    font-size: 24px;
-    font-weight: 600;
   }
 }
