@@ -19,10 +19,10 @@
     pointer-events: none;
   }
 
- &__description {
-  display: flex;
-  gap: 40px;
- }
+  &__description {
+    display: flex;
+    gap: 40px;
+  }
 
   &__image {
     width: 160px;
@@ -58,29 +58,29 @@
     }
   }
 
-.teacher-tabs {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid $border-color-primary;
-  margin-top: 20px;
+  .teacher-tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color-primary;
+    margin-top: 20px;
 
     &__buttons {
-    display: flex;
-    flex: 0 1 33%;
-    padding: 20px 0;
-    color: $text-color-primary;
-    font-size: 20px;
-    cursor: pointer;
+      display: flex;
+      flex: 0 1 33%;
+      padding: 20px 0;
+      color: $text-color-primary;
+      font-size: 20px;
+      cursor: pointer;
 
-    &.active {
-      color: $controls-bg-primary-hover;
-    }
+      &.active {
+        color: $controls-bg-primary-hover;
+      }
 
-    &:hover {
-      color: $controls-bg-primary-hover;
+      &:hover {
+        color: $controls-bg-primary-hover;
+      }
     }
   }
- }
 }
 
 .teacher-info-tab {
