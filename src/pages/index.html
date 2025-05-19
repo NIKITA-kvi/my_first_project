@@ -303,20 +303,24 @@
       </div>
     </footer>
 
+
+
+
+
     <div class="modal">
       <div class="modal__backdrop"></div>
       <div class="modal__content">
-        <div class="modal__teacher">
-          <div class="modal-teacher-description">
+        <div class="teacher-modal">
+          <div class="teacher-modal__description">
             <img
-              class="modal-teacher-description__image"
+              class="teacher-modal__image"
               src="../assets/images/modal-image.png"
               alt="teacher"
             />
-            <div class="modal-teacher-description__about">
-              <h4 class="modal-teacher-description__title">Марина Орлова</h4>
-              <p class="modal-teacher-description__subtitle">преподаватель по робототехнике</p>
-              <div class="modal-teacher-description__social">
+            <div class="teacher-modal__about">
+              <h4 class="teacher-modal__title">Марина Орлова</h4>
+              <p class="teacher-modal__subtitle">преподаватель по робототехнике</p>
+              <div class="teacher-modal__social">
                 <a href="https://www.facebook.com/">
                   <img src="../assets/icons/facebook__logo.svg" alt="facebook" />
                 </a>
@@ -326,32 +330,24 @@
               </div>
             </div>
           </div>
-
-          <div class="modal-buttons">
-            <button class="modal-buttons__button active" data-tab="education">Образование</button>
-            <button class="modal-buttons__button" data-tab="experience">Опыт работы</button>
-            <button class="modal-buttons__button" data-tab="achievements">Награды</button>
+          <div class="teacher-modal__tabs teacher-tabs">
+            <button class="teacher-tabs__buttons active" data-tab="education">Образование</button>
+            <button class="teacher-tabs__buttons" data-tab="experience">Опыт работы</button>
+            <button class="teacher-tabs__buttons" data-tab="achievements">Награды</button>
           </div>
-
           <div class="teacher-modal__information teacher-info-tab">
             <div class="teacher-info-tab__content active" data-tab="education">
               <div class="teacher-info-tab__entry">
-                <div class="teacher-info-tab__title">Заголовок-1</div>
-                <p class="teacher-info-tab__text">Сентябрь 1995 — Июнь 2000</p>
-                <p class="teacher-info-tab__text">
-                  Санкт-Петербургский политехнический университет Петра Великого
-                </p>
+                <p class="teacher-info-tab__text">Сентябрь 1995 — Июнь 2000</p> 
+                <p class="teacher-info-tab__text">Санкт-Петербургский политехнический университет Петра Великого  </p>
                 <p class="teacher-info-tab__text">Факультет: Компьютерных наук и технологий</p>
                 <p class="teacher-info-tab__text">Специальность: Математика и компьютерные науки</p>
                 <p class="teacher-info-tab__text">Форма обучения: Очная</p>
               </div>
 
-              <div class="teacher-info-tab__title">Курсы и тренинги</div>
-
               <div class="teacher-info-tab__entry">
-                <p class="teacher-info-tab__text">
-                  Прошла курс 'Машинное обучение и искусственный интеллект' на платформе Coursera.
-                </p>
+                <div class="teacher-info-tab__title">Курсы и тренинги</div>
+                <p class="teacher-info-tab__text">Прошла курс 'Машинное обучение и искусственный интеллект' на платформе Coursera.</p>
                 <p class="teacher-info-tab__text">
                   Приняла участие в тренинге по разработке робототехнических систем в Школе
                   робототехники и автоматизации.Приняла участие в тренинге по разработке
@@ -365,27 +361,6 @@
 
             <div class="teacher-info-tab__content" data-tab="experience">
               <div class="teacher-info-tab__entry">
-                <div class="teacher-info-tab__title">Заголовок-2</div>
-                <p class="teacher-info-tab__text">
-                  Работала в качестве преподавателя по робототехнике в техническом университете в
-                  течение трех лет. Проводила лекции, практические занятия и лабораторные работы для
-                  студентов, обучая их основам робототехники, программированию и электронике. Также
-                  руководила студенческими проектами в области робототехники, помогая студентам
-                  разрабатывать и строить собственные роботы.
-                </p>
-              </div>
-
-              <div class="teacher-info-tab__entry">
-                <p class="teacher-info-tab__text">
-                  Работала в качестве преподавателя по робототехнике в техническом университете в
-                  течение трех лет. Проводила лекции, практические занятия и лабораторные работы для
-                  студентов, обучая их основам робототехники, программированию и электронике. Также
-                  руководила студенческими проектами в области робототехники, помогая студентам
-                  разрабатывать и строить собственные роботы.
-                </p>
-              </div>
-
-              <div class="teacher-info-tab__entry">
                 <p class="teacher-info-tab__text">
                   Работала в качестве преподавателя по робототехнике в техническом университете в
                   течение трех лет. Проводила лекции, практические занятия и лабораторные работы для
@@ -398,27 +373,6 @@
 
             <div class="teacher-info-tab__content" data-tab="achievements">
               <div class="teacher-info-tab__entry">
-                <div class="teacher-info-tab__title">Заголовок-3</div>
-                <p class="teacher-info-tab__text">
-                  Победитель национального соревнования робототехники. Привела команду студентов,
-                  которые разработали и построили инновационного робота, способного выполнять
-                  сложные задачи. Их проект получил высокую оценку экспертов и был признан лучшим на
-                  соревновании.
-                </p>
-              </div>
-
-              <div class="teacher-info-tab__entry">
-                <div class="teacher-info-tab__title">Заголовок-3</div>
-                <p class="teacher-info-tab__text">
-                  Победитель национального соревнования робототехники. Привела команду студентов,
-                  которые разработали и построили инновационного робота, способного выполнять
-                  сложные задачи. Их проект получил высокую оценку экспертов и был признан лучшим на
-                  соревновании.
-                </p>
-              </div>
-
-              <div class="teacher-info-tab__entry">
-                <div class="teacher-info-tab__title">Заголовок-3</div>
                 <p class="teacher-info-tab__text">
                   Победитель национального соревнования робототехники. Привела команду студентов,
                   которые разработали и построили инновационного робота, способного выполнять

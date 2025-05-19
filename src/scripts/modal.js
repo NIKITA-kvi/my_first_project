@@ -1,7 +1,7 @@
 const modal = document.querySelector('.modal');
 const modalBackDrop = document.querySelector('.modal__backdrop');
 const closeModalBtn = document.querySelector('.modal__close-btn');
-const tabButtons = document.querySelectorAll('.modal-buttons__button');
+const tabButtons = document.querySelectorAll('.teacher-tabs__buttons');
 const tabContents = document.querySelectorAll('.teacher-info-tab__content');
 const openModalBtn = document.querySelectorAll('.teachers-card__btn');
 
@@ -41,6 +41,8 @@ tabButtons.forEach((button) => {
     const tab = button.getAttribute('data-tab');
 
     button.classList.add('active');
-    document.querySelector(`.teacher-info-tab__content[data-tab="${tab}"]`).classList.add('active');
+    
+    const tabContent = document.querySelector(`.teacher-info-tab__content[data-tab="${tab}"]`);
+    tabContent.classList.add('active');
   });
 });
