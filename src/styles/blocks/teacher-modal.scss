@@ -81,39 +81,52 @@
       }
     }
   }
-}
 
-.teacher-info-tab {
-  height: 355px;
-  overflow-y: auto;
-  padding: 0 20px 25px 0;
+  .teacher-info-tab {
+    height: 355px;
+    overflow-y: auto;
+    padding: 0 20px 40px 0;
 
-  &__content {
-    display: none;
+    &__content {
+      display: none;
 
-    &.active {
-      display: block;
+      &.active {
+        display: block;
+      }
     }
-  }
 
-  &__entry {
-    margin-top: 20px;
+    &__entry {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
 
-    > :first-child {
-      margin-top: 0;
+        .teacher-info-tab__title {
+          margin: 20px 0;
+        }
+      }
+
+      &:not(:first-child) {
+        .teacher-info-tab__title {
+          margin: 40px 0 20px 0;
+        }
+      }
     }
-  }
+    .entry--no-title {
+      .teacher-info-tab__text:first-of-type {
+        margin-top: 20px;
+      }
+    }
 
-  &__title {
-    font-weight: 600;
-    font-size: 24px;
-    color: $text-color-primary;
-    margin: 40px 0 20px 0;
-  }
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      color: $text-color-primary;
+    }
 
-  &__text {
-    font-size: 20px;
-    color: $text-color-primary;
-    text-align: justify;
+    &__text {
+      font-size: 20px;
+      color: $text-color-primary;
+      text-align: justify;
+    }
   }
 }

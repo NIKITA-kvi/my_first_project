@@ -41,7 +41,6 @@ tabButtons.forEach((button) => {
     const tab = button.getAttribute('data-tab');
 
     button.classList.add('active');
-
     const tabContent = document.querySelector(`.teacher-info-tab__content[data-tab="${tab}"]`);
     tabContent.classList.add('active');
   });
