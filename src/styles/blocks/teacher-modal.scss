@@ -37,13 +37,20 @@
 
   &__title {
     color: $text-color-primary;
+<<<<<<< HEAD
     font-size: clamp(16px, 5vw, 24px);
+=======
+    font-size: 24px;
+>>>>>>> origin/main
     font-weight: 600;
   }
 
   &__subtitle {
     color: $text-color-quaternary;
+<<<<<<< HEAD
     font-size: clamp(12px, 5vw, 18px);
+=======
+>>>>>>> origin/main
   }
 
   &__social {
@@ -56,11 +63,14 @@
       &:hover {
         transform: scale(1.2);
       }
+<<<<<<< HEAD
 
       img {
         width: 25px;
         height: 25px;
       }
+=======
+>>>>>>> origin/main
     }
   }
 
@@ -78,7 +88,14 @@
       font-size: 20px;
       cursor: pointer;
 
+<<<<<<< HEAD
       &.active,
+=======
+      &.active {
+        color: $controls-bg-primary-hover;
+      }
+
+>>>>>>> origin/main
       &:hover {
         color: $controls-bg-primary-hover;
       }
@@ -86,10 +103,16 @@
   }
 
   .teacher-info-tab {
+<<<<<<< HEAD
     margin-top: 20px;
     height: 355px;
     overflow-y: auto;
     padding: 0 10px 20px 0;
+=======
+    height: 355px;
+    overflow-y: auto;
+    padding: 0 20px 40px 0;
+>>>>>>> origin/main
 
     &__content {
       display: none;
@@ -101,11 +124,15 @@
 
     &__entry {
       margin-top: 20px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
       &:first-child {
         margin-top: 0;
 
         .teacher-info-tab__title {
+<<<<<<< HEAD
           margin-top: 0;
           margin-bottom: 20px;
         }
@@ -119,11 +146,15 @@
             margin-top: 40px;
             margin-bottom: 20px;
           }
+=======
+          margin: 20px 0;
+>>>>>>> origin/main
         }
       }
 
       &:not(:first-child) {
         .teacher-info-tab__title {
+<<<<<<< HEAD
           margin-top: 40px;
           margin-bottom: 20px;
         }
@@ -139,30 +170,48 @@
       }
     }
 
+=======
+          margin: 40px 0 20px 0;
+        }
+      }
+    }
+>>>>>>> origin/main
     .entry--no-title {
       .teacher-info-tab__text:first-of-type {
         margin-top: 20px;
       }
+<<<<<<< HEAD
 
       .teacher-info-tab__text + .teacher-info-tab__title {
         margin-top: 40px;
         margin-bottom: 20px;
       }
+=======
+>>>>>>> origin/main
     }
 
     &__title {
       font-weight: 600;
+<<<<<<< HEAD
       font-size: clamp(16px, 5vw, 24px);
+=======
+      font-size: 24px;
+>>>>>>> origin/main
       color: $text-color-primary;
     }
 
     &__text {
+<<<<<<< HEAD
       font-size: clamp(14px, 4vw, 20px);
+=======
+      font-size: 20px;
+>>>>>>> origin/main
       color: $text-color-primary;
       text-align: justify;
     }
   }
 }
+<<<<<<< HEAD
 
 .mobile-tabs {
   display: none;
@@ -317,3 +366,5 @@
     }
   }
 }
+=======
+>>>>>>> origin/main
