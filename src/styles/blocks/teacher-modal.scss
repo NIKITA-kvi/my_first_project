@@ -37,12 +37,13 @@
 
   &__title {
     color: $text-color-primary;
-    font-size: 24px;
+    font-size: clamp(16px, 5vw, 24px);
     font-weight: 600;
   }
 
   &__subtitle {
     color: $text-color-quaternary;
+    font-size: clamp(12px, 5vw, 18px);
   }
 
   &__social {
@@ -151,12 +152,12 @@
 
     &__title {
       font-weight: 600;
-      font-size: 24px;
+      font-size: clamp(16px, 5vw, 24px);
       color: $text-color-primary;
     }
 
     &__text {
-      font-size: 20px;
+      font-size: clamp(14px, 4vw, 20px);
       color: $text-color-primary;
       text-align: justify;
     }
@@ -180,9 +181,9 @@
     gap: 5px;
     width: 100%;
     margin-top: 20px;
-    font-size: 16px;
-    background-color: red;
-    color: white;
+    font-size: clamp(16px, 3vw, 20px);
+    background-color: $controls-bg-primary;
+    color: $text-color-tertiary;
     min-height: 46px;
     cursor: pointer;
     border-bottom: 1px solid white;
@@ -214,8 +215,8 @@
   &__option {
     width: 100%;
     min-height: 46px;
-    background-color: red;
-    color: white;
+    background-color: $controls-bg-primary;
+    color: $text-color-tertiary;
     font-size: 16px;
     cursor: pointer;
     border-bottom: 1px solid white;
@@ -263,24 +264,14 @@
       gap: 5px;
     }
 
-    &__title {
-      font-size: 16px;
-    }
-
     &__subtitle {
-      font-size: 11px;
       margin-top: 5px;
     }
 
     .teacher-info-tab {
       height: 275px;
 
-      &__title {
-        font-size: 16px;
-      }
-
       &__text {
-        font-size: 14px;
         text-align: left;
       }
 
