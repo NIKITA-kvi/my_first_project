@@ -5,7 +5,7 @@
 
   &__title {
     margin-bottom: 50px;
-    font-size: 50px;
+    font-size: clamp(30px, 3vw, 50px);
     font-weight: 600;
     color: $text-color-primary;
   }
@@ -21,14 +21,14 @@
     flex-basis: 360px;
 
     &__title {
-      font-size: 24px;
+      font-size: clamp(20px, 2vw, 24px);
       font-weight: 600;
       color: $text-color-primary;
     }
 
     &__text {
       margin-top: 20px;
-      font-size: 18px;
+      font-size: clamp(16px, 1.5vw, 18px);
       color: $text-color-quaternary;
     }
   }
@@ -58,14 +58,48 @@
     font-size: 16px;
     border-radius: 10px;
     text-align: center;
-    border-radius: 10px;
     display: none;
     background-color: $bg-color-primary;
     color: $text-color-primary;
     box-shadow: $shadow-light;
   }
 
-  &:hover .tooltip__text {
+  &:hover &__text {
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    padding: 40px 0;
+
+    &__title {
+      text-align: center;
+      min-width: 300px;
+    }
+
+    &__items {
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .benefit-item {
+      &__title {
+        text-align: center;
+      }
+
+      &__text {
+        text-align: center;
+        margin-top: 10px;
+        min-width: 300px;
+      }
+    }
+  }
+
+  .tooltip {
+    &__text {
+      left: 50%;
+      transform: translateX(-72%);
+    }
   }
 }

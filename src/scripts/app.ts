@@ -7,3 +7,5 @@ import '../styles/main.scss';
 // Импорт всех скриптов
 import './slider.js';
 import './form.js';
+import './modal.js';
+import './burger.js';

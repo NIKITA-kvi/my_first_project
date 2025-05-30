@@ -6,32 +6,34 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 80px 0;
 
   &__content {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     padding: 0 60px;
-    gap: 20px;
+    gap: 40px;
   }
 
   .enroll-info {
-    flex: 1 0 300px;
+    flex: 1 1 300px;
 
     &__title {
-      font-size: 36px;
+      font-size: clamp(30px, 4vw, 36px);
       font-weight: 600;
       color: $text-color-tertiary;
     }
 
     &__text {
-      font-size: 20px;
+      font-size: clamp(16px, 1.5vw, 20px);
       color: $text-color-tertiary;
       margin-top: 20px;
     }
   }
 
-  .enroll__form {
+  &__form {
     display: flex;
     flex-direction: column;
     flex: 0 1 500px;
@@ -45,12 +47,11 @@
       padding: 17px 20px;
       width: 100%;
       font-size: 18px;
-      line-height: normal;
       background-color: $bg-color-primary;
       border-radius: 5px;
       border: 1px solid transparent;
-      box-sizing: border-box;
       transition: border-color 0.3s ease;
+      box-sizing: border-box;
     }
 
     &__input--invalid {
@@ -63,11 +64,35 @@
       height: 1px;
       margin: -1px;
       overflow: hidden;
+      clip: rect(0, 0, 0, 0);
     }
   }
 
   &__form-btn {
-    line-height: normal;
     padding: 18.5px 0;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .enroll {
+    padding: 40px 0;
+
+    &__content {
+      padding: 0;
+      gap: 40px;
+    }
+
+    .enroll-info {
+      text-align: center;
+
+      &__text {
+        margin-top: 10px;
+      }
+    }
+
+    &__form {
+      flex: 1 1 100%;
+    }
   }
 }

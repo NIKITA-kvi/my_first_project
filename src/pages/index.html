@@ -10,7 +10,7 @@
     <header class="header">
       <div class="container container--wide">
         <div class="header__content">
-          <a href="/" class="logo">ROBO.SCHOOL</a>
+          <a class="logo header__logo" href="/">ROBO.SCHOOL</a>
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li><a class="header__nav-link" href="#">О школе</a></li>
@@ -19,9 +19,37 @@
             </ul>
           </nav>
           <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
+
+          <div class="burger-wrapper opn">
+            <a href="tel:+79999999999">
+              <img class="burger-wrapper__tel" src="../assets/icons/call__icon.svg" alt="tel" />
+            </a>
+
+            <button class="burger-wrapper__nav" aria-label="Открыть меню">
+              <img src="../assets/icons/burger-lines.svg" alt="line" />
+              <img src="../assets/icons/burger-lines.svg" alt="line" />
+              <img src="../assets/icons/burger-lines.svg" alt="line" />
+            </button>
+          </div>
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu">
+      <button class="mobile-menu__close">
+        <img
+          class="mobile-menu__close-icon"
+          src="../assets/icons/close__icon.svg"
+          alt="Закрыть меню"
+        />
+      </button>
+
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="/">О школе</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="/">Тренеры</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="/">Стоимость</a></li>
+      </ul>
+    </div>
 
     <main class="main">
       <section class="promo">
@@ -44,8 +72,8 @@
           <b>Robo School</b> – учреждение для формирования кадрового педагогического резерва в сфере
           робототехники и программирования
         </p>
-        <div class="about__items">
-          <div class="about__item about-item">
+        <div class="about__items about-item">
+          <div class="about-item">
             <span class="about-item__number">10</span>
             <div class="about-item__text">УМК по различным направлениям по робототехнике</div>
           </div>
@@ -117,8 +145,8 @@
               </span>
             </h3>
             <p class="benefit-item__text">
-              По основам разработки учебно-методических комплексов по робототехнике и
-              программированию
+              Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн
+              или онлайн формате)
             </p>
           </div>
         </div>
@@ -266,7 +294,6 @@
             <h3 class="enroll-info__title">Запишитесь на курс со скидкой 10%</h3>
             <p class="enroll-info__text">Акция действительна до 10 марта 2022 года</p>
           </div>
-
           <form class="enroll__form enroll-form" id="form">
             <div class="enroll-form__field enroll-field">
               <label class="enroll-field__label" for="name"></label>
@@ -291,14 +318,133 @@
       </div>
     </section>
 
+    <div class="modal">
+      <div class="modal__backdrop"></div>
+      <div class="modal__content">
+        <div class="teacher-modal">
+          <div class="teacher-modal__description">
+            <img
+              class="teacher-modal__image"
+              src="../assets/images/modal-image.png"
+              alt="teacher"
+            />
+            <div class="teacher-modal__about">
+              <h4 class="teacher-modal__title">Марина Орлова</h4>
+              <p class="teacher-modal__subtitle">преподаватель по робототехнике</p>
+              <div class="teacher-modal__social">
+                <a href="https://www.facebook.com/">
+                  <img src="../assets/icons/facebook__logo.svg" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com">
+                  <img src="../assets/icons/instagram__logo.svg" alt="instagram" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="teacher-modal__tabs teacher-tabs">
+            <button class="teacher-tabs__buttons active" data-tab="education">Образование</button>
+            <button class="teacher-tabs__buttons" data-tab="experience">Опыт работы</button>
+            <button class="teacher-tabs__buttons" data-tab="achievements">Награды</button>
+          </div>
+
+          <div class="mobile-tabs">
+            <div class="mobile-tabs__wrapper">
+              <button class="mobile-tabs__button" id="mobileTabSelectBtn" aria-expanded="false">
+                <span class="mobile-tabs__text">Образование</span>
+                <img
+                  class="mobile-tabs__icon"
+                  src="../assets/icons/arrow-mobile.svg"
+                  alt="arrow-down"
+                />
+              </button>
+
+              <div class="mobile-tabs__dropdown" id="mobileTabDropdown">
+                <button class="mobile-tabs__option" data-tab="experience">Опыт работы</button>
+                <button class="mobile-tabs__option" data-tab="achievements">Награды</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="teacher-modal__information teacher-info-tab">
+            <div class="teacher-info-tab__content active" data-tab="education">
+              <div class="teacher-info-tab__entry entry--no-title">
+                <p class="teacher-info-tab__text">Сентябрь 1995 — Июнь 2000</p>
+                <p class="teacher-info-tab__text">
+                  Санкт-Петербургский политехнический университет Петра Великого
+                </p>
+                <p class="teacher-info-tab__text">Факультет: Компьютерных наук и технологий</p>
+                <p class="teacher-info-tab__text">Специальность: Математика и компьютерные науки</p>
+                <p class="teacher-info-tab__text">Форма обучения: Очная</p>
+              </div>
+
+              <div class="teacher-info-tab__entry entry--no-title">
+                <div class="teacher-info-tab__title">Курсы и тренинги</div>
+                <p class="teacher-info-tab__text">
+                  Прошла курс 'Машинное обучение и искусственный интеллект' на платформе Coursera.
+                </p>
+                <p class="teacher-info-tab__text">
+                  Приняла участие в тренинге по разработке робототехнических систем в Школе
+                  робототехники и автоматизации.Приняла участие в тренинге по разработке
+                  робототехнических систем в Школе робототехники и автоматизации.Приняла участие в
+                  тренинге по разработке робототехнических систем в Школе робототехники и
+                  автоматизации.Приняла участие в тренинге по разработке робототехнических систем в
+                  Школе робототехники и автоматизации.
+                </p>
+              </div>
+            </div>
+
+            <div class="teacher-info-tab__content" data-tab="experience">
+              <div class="teacher-info-tab__entry entry--no-title">
+                <div class="teacher-info-tab__title">Опыт работы</div>
+                <p class="teacher-info-tab__text">
+                  Работала в качестве преподавателя по робототехнике в техническом университете в
+                  течение трех лет. Проводила лекции, практические занятия и лабораторные работы для
+                  студентов, обучая их основам робототехники, программированию и электронике. Также
+                  руководила студенческими проектами в области робототехники, помогая студентам
+                  разрабатывать и строить собственные роботы.
+                </p>
+              </div>
+
+              <div class="teacher-info-tab__entry entry--no-title">
+                <p class="teacher-info-tab__text">
+                  Работала в качестве преподавателя по робототехнике в техническом университете в
+                  течение трех лет. Проводила лекции, практические занятия и лабораторные работы для
+                  студентов, обучая их основам робототехники, программированию и электронике. Также
+                  руководила студенческими проектами в области робототехники, помогая студентам
+                  разрабатывать и строить собственные роботы.
+                </p>
+              </div>
+            </div>
+
+            <div class="teacher-info-tab__content" data-tab="achievements">
+              <div class="teacher-info-tab__entry entry--no-title">
+                <div class="teacher-info-tab__title"></div>
+                <p class="teacher-info-tab__text">
+                  Победитель национального соревнования робототехники. Привела команду студентов,
+                  которые разработали и построили инновационного робота, способного выполнять
+                  сложные задачи. Их проект получил высокую оценку экспертов и был признан лучшим на
+                  соревновании.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="modal__close-btn">Закрыть</button>
+        <button class="modal__close-mobile">
+          <img src="../assets/icons/close-mobile-modal.svg" alt="close" />
+        </button>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container container--wide">
         <div class="footer__content">
           <div class="footer__text">
-            <a class="logo" href="/">ROBO.SCHOOL</a>
-            <p class="footer__copyright">&copy; ROBO.SCHOOL</p>
+            <a class="logo footer__logo" href="/">ROBO.SCHOOL</a>
+            <a class="phone footer__phone" href="tel:+78000001122">+7 800 000 11 22</a>
           </div>
-          <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
+          <p class="footer__copyright">&copy; ROBO.SCHOOL</p>
         </div>
       </div>
     </footer>

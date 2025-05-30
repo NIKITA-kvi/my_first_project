@@ -1,0 +1,328 @@
+@use '../variables' as *;
+
+.teacher-modal {
+  position: relative;
+  max-width: 860px;
+  max-height: 688px;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 96%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(232, 226, 226, 0) 0%, rgb(255, 255, 255) 100%);
+    filter: blur(1px);
+    pointer-events: none;
+  }
+
+  &__description {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__image {
+    width: 160px;
+    height: auto;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    color: $text-color-primary;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: $text-color-quaternary;
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+
+    a {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .teacher-tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color-primary;
+    margin-top: 20px;
+
+    &__buttons {
+      display: flex;
+      flex: 0 1 33%;
+      padding: 20px 0;
+      color: $text-color-primary;
+      font-size: 20px;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        color: $controls-bg-primary-hover;
+      }
+    }
+  }
+
+  .teacher-info-tab {
+    margin-top: 20px;
+    height: 355px;
+    overflow-y: auto;
+    padding: 0 10px 20px 0;
+
+    &__content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &__entry {
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+
+        .teacher-info-tab__title {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+
+        &.entry--no-title {
+          .teacher-info-tab__text:first-of-type {
+            margin-top: 0;
+          }
+
+          .teacher-info-tab__text + .teacher-info-tab__title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &:not(:first-child) {
+        .teacher-info-tab__title {
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+
+        .teacher-info-tab__text:first-of-type {
+          margin-top: 0;
+        }
+      }
+
+      .teacher-info-tab__text + .teacher-info-tab__title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .entry--no-title {
+      .teacher-info-tab__text:first-of-type {
+        margin-top: 20px;
+      }
+
+      .teacher-info-tab__text + .teacher-info-tab__title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      color: $text-color-primary;
+    }
+
+    &__text {
+      font-size: 20px;
+      color: $text-color-primary;
+      text-align: justify;
+    }
+  }
+}
+
+.mobile-tabs {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    min-height: 46px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  &__option {
+    width: 100%;
+    min-height: 46px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-tabs {
+    display: flex;
+
+    &__icon {
+      display: block;
+    }
+  }
+
+  .teacher-modal {
+    &::after {
+      width: 93%;
+    }
+
+    .teacher-tabs {
+      display: none;
+    }
+
+    &__description {
+      gap: 10px;
+    }
+
+    &__image {
+      width: 60px;
+      height: 85px;
+    }
+
+    &__about {
+      gap: 0;
+    }
+
+    &__social {
+      margin-top: 10px;
+      gap: 5px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__subtitle {
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .teacher-info-tab {
+      height: 275px;
+
+      &__title {
+        font-size: 16px;
+      }
+
+      &__text {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      &__entry {
+        &:first-child {
+          .teacher-info-tab__title {
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+
+          .teacher-info-tab__text:first-of-type {
+            margin-top: 10px;
+          }
+        }
+
+        &:not(:first-child) {
+          .teacher-info-tab__title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .teacher-info-tab__text + .teacher-info-tab__title {
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        .teacher-info-tab__text:first-of-type {
+          margin-top: 10px;
+        }
+      }
+
+      .entry--no-title {
+        .teacher-info-tab__text:first-of-type {
+          margin-top: 10px;
+        }
+
+        .teacher-info-tab__text + .teacher-info-tab__title {
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

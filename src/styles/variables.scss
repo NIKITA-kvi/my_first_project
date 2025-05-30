@@ -5,14 +5,11 @@ $secondary-color: #ffffff;
 $tertiary-color: #dddce0;
 $accent-color: #d52027;
 
-$shadow-light: 0px 2px 8px 0px #1410241a;
-
-$border-color-primary: #d0cfd3;
-
 $bg-color-primary: #ffffff;
 $bg-color-secondary: $primary-color;
 $bg-color-tertiary: #f9f9f9;
 $bg-color-quaternary: $accent-color;
+$bg-color-quinary: #00000080;
 
 $text-color-primary: $primary-color;
 $text-color-secondary: #b8b7bd;
@@ -25,5 +22,9 @@ $controls-color-primary: $secondary-color;
 $controls-bg-secondary: $primary-color;
 $controls-bg-secondary-hover: #13054d;
 $controls-bg-tertiary: #d9d9d9;
+$controls-bg-quaternary: #1b172b;
 
-$border-color-primary: $primary-color;
+$shadow-light: 0px 2px 8px 0px #1410241a;
+
+$border-color-primary: #e5e5e7;
+$border-color-secondary: #54515f;
