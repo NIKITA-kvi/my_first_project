@@ -8,7 +8,5 @@ import '../styles/main.scss';
 import './slider.js';
 import './form.js';
 import './modal.js';
-<<<<<<< HEAD
 import './burger.js';
-=======
->>>>>>> origin/main
+
