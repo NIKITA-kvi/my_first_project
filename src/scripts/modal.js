@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('.modal');
   const modalBackdrop = document.querySelector('.modal__backdrop');
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setActiveTab('education');
-=======
+  
 const modal = document.querySelector('.modal');
 const modalBackDrop = document.querySelector('.modal__backdrop');
 const closeModalBtn = document.querySelector('.modal__close-btn');
@@ -133,5 +133,4 @@ tabButtons.forEach((button) => {
     const tabContent = document.querySelector(`.teacher-info-tab__content[data-tab="${tab}"]`);
     tabContent.classList.add('active');
   });
->>>>>>> origin/main
 });
