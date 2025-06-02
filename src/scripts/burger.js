@@ -28,6 +28,4 @@ menu.addEventListener('animationend', (event) => {
     menu.classList.remove('mobile-menu--closing');
     menu.style.display = 'none';
   }
-  if (event.animationName === 'slideIn') {
-  }
 });
