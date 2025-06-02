@@ -2,16 +2,45 @@
 
 .footer {
   background-color: $primary-color;
-  padding: 40px 0;
+  padding: 40px;
 
-  &__content {
+  &__text {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
   }
 
   &__copyright {
     color: $text-color-secondary;
     padding: 5px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+
+    .container {
+      &--wide {
+        padding: 0 10px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__copyright {
+      padding: 0;
+    }
   }
 }

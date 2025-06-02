@@ -8,3 +8,5 @@ import '../styles/main.scss';
 import './slider.js';
 import './form.js';
 import './modal.js';
+import './burger.js';
+import './mobile-modal.js';
