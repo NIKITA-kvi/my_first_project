@@ -4,7 +4,7 @@
   &__school {
     max-width: 891px;
     margin-bottom: 60px;
-    font-size: 30px;
+    font-size: clamp(20px, 2vw, 30px);
   }
 
   &__items {
@@ -15,18 +15,54 @@
   }
 
   .about-item {
-    flex-basis: 260px;
+    flex-basis: 270px;
 
     &__number {
-      font-size: 70px;
+      font-size: clamp(60px, 5vw, 70px);
       font-weight: 600;
       word-break: keep-all;
       color: $accent-color;
     }
 
     &__text {
-      font-size: 18px;
+      font-size: clamp(16px, 1.5vw, 18px);
       color: $text-color-quaternary;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+
+    &__school {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      gap: 30px;
+    }
+
+    .about-item {
+      flex-basis: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__number {
+        color: $accent-color;
+      }
+
+      &__text {
+        max-width: 270px;
+        text-align: center;
+        color: $text-color-quaternary;
+      }
     }
   }
 }
