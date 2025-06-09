@@ -96,6 +96,7 @@
     }
 
     &__title {
+      font-size: 30px;
       text-align: center;
     }
 
@@ -108,23 +109,26 @@
     }
 
     .package-card {
-      flex: 0 0 300;
-      padding: 40px 10px;
-      min-width: 300px;
+      max-width: 300px;
+      min-height: 395px;
+      padding: 40px 20px;
+      flex-basis: 0;
 
       &__price {
         margin-top: 40px;
+        font-size: 50px;
       }
 
       &__description {
         margin: 20px 0 40px;
-        height: 52px;
         max-width: 250px;
+        font-size: 16px;
       }
 
       &__button {
         min-width: 260px;
         height: 60px;
+        margin: 0;
       }
     }
   }

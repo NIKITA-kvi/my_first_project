@@ -29,3 +29,35 @@ menu.addEventListener('animationend', (event) => {
     menu.style.display = 'none';
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerButton = document.querySelector('.burger-wrapper__nav');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const closeButton = document.querySelector('.mobile-menu__close');
+  const menuLinks = document.querySelectorAll('.mobile-menu__link');
+
+  const openMenu = () => {
+    mobileMenu.classList.add('mobile-menu--opn');
+    mobileMenu.classList.remove('mobile-menu--closing');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMenu = () => {
+    mobileMenu.classList.add('mobile-menu--closing');
+    mobileMenu.classList.remove('mobile-menu--opn');
+    document.body.style.overflow = '';
+
+    setTimeout(() => {
+      mobileMenu.classList.remove('mobile-menu--closing');
+    }, 300);
+  };
+
+  burgerButton.addEventListener('click', openMenu);
+  closeButton.addEventListener('click', closeMenu);
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+});

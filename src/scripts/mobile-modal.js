@@ -1,14 +1,5 @@
-const mobileModalClose = document.querySelector('.modal__close-mobile');
-const modal = document.querySelector('.modal');
-
-mobileModalClose.addEventListener('click', () => {
-  modal.classList.remove('open');
-  document.body.style.overflow = 'auto';
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('.modal');
-  const modalOpenBtns = document.querySelectorAll('[data-open-modal]');
   const modalCloseBtns = modal.querySelectorAll('.modal__close-btn, .modal__close-mobile');
 
   const mobileTabBtn = document.getElementById('mobileTabSelectBtn');
@@ -28,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       mobileTabText.textContent = option.textContent;
 
+      options.forEach((opt) => opt.classList.remove('selected'));
+      option.classList.add('selected');
+
       tabContents.forEach((content) => {
         content.classList.toggle('active', content.dataset.tab === selectedTab);
       });
@@ -38,13 +32,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   modalCloseBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
+      modal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+
       mobileTabText.textContent = 'Образование';
 
       tabContents.forEach((content) => {
         content.classList.toggle('active', content.dataset.tab === 'education');
       });
 
+      options.forEach((opt) => {
+        opt.classList.toggle('selected', opt.dataset.tab === 'education');
+      });
+
       dropdown.classList.remove('open');
     });
+  });
+
+  modal.addEventListener('click', (e) => {
+    const isDropdown = dropdown.contains(e.target);
+    const isTabButton = mobileTabBtn.contains(e.target);
+    const isInsideContent = e.target.closest('.teacher-modal');
+
+    if (isInsideContent && !isDropdown && !isTabButton) {
+      modal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+
+      mobileTabText.textContent = 'Образование';
+
+      tabContents.forEach((content) => {
+        content.classList.toggle('active', content.dataset.tab === 'education');
+      });
+
+      options.forEach((opt) => {
+        opt.classList.toggle('selected', opt.dataset.tab === 'education');
+      });
+
+      dropdown.classList.remove('open');
+    }
   });
 });
