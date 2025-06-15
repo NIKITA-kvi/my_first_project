@@ -33,13 +33,29 @@ section {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: clamp(18px, 4vw, 30px);
   font-weight: 700;
   color: $controls-color-primary;
 }
 
 .phone {
-  font-size: 30px;
+  font-size: clamp(16px, 3vw, 30px);
   font-weight: 600;
   color: $controls-color-primary;
+}
+
+b {
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-section {
+  scroll-margin-top: 50px;
+}
+
+.scroll-section-packages {
+  scroll-margin-top: 150px;
 }

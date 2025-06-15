@@ -2,7 +2,7 @@
 
 .teachers {
   &__title {
-    font-size: 50px;
+    font-size: clamp(30px, 3vw, 50px);
     font-weight: 600;
     color: $text-color-primary;
   }
@@ -38,20 +38,20 @@
     &__name {
       display: block;
       margin-top: 20px;
-      font-size: 24px;
+      font-size: clamp(20px, 2vw, 24px);
       font-weight: 600;
       color: $text-color-primary;
     }
 
     &__description {
       margin-top: 10px;
-      font-size: 18px;
+      font-size: clamp(14px, 2vw, 18px);
       color: $text-color-quaternary;
     }
 
     &__btn {
       margin-top: 20px;
-      font-size: 18px;
+      font-size: clamp(16px, 2vw, 18px);
       color: $controls-bg-primary;
       background: none;
       border: none;
@@ -107,6 +107,46 @@
         &:active {
           transform: scale(0.95);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .teachers {
+    padding: 60px 0 0 0;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .teachers-slider {
+      margin: 0 -20px;
+      width: calc(100% + 40px);
+
+      &__items {
+        padding: 0 10px;
+        gap: 20px;
+      }
+    }
+
+    .teachers-card {
+      flex: 1 0 220px;
+
+      &__image {
+        height: 306px;
+      }
+    }
+
+    .teachers-controls {
+      &__buttons {
+        display: none;
+      }
+
+      &__scrollbar {
+        width: 300px;
+        margin: 0 auto;
       }
     }
   }

@@ -13,15 +13,43 @@
           <a href="/" class="logo">ROBO.SCHOOL</a>
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li><a class="header__nav-link" href="#">О школе</a></li>
-              <li><a class="header__nav-link" href="#">Тренеры</a></li>
-              <li><a class="header__nav-link" href="#">Стоимость</a></li>
+              <li><a class="header__nav-link" href="#about">О школе</a></li>
+              <li><a class="header__nav-link" href="#teachers">Тренеры</a></li>
+              <li><a class="header__nav-link" href="#packages">Стоимость</a></li>
             </ul>
           </nav>
           <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
+
+          <div class="burger-wrapper opn">
+            <a href="tel:+79999999999">
+              <img class="burger-wrapper__tel" src="../assets/icons/call__icon.svg" alt="tel" />
+            </a>
+
+            <button class="burger-wrapper__nav" aria-label="Открыть меню">
+              <img src="../assets/icons/burger-menu-lines.svg" alt="line" />
+            </button>
+          </div>
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu">
+      <button class="mobile-menu__close">
+        <img
+          class="mobile-menu__close-icon"
+          src="../assets/icons/close__icon.svg"
+          alt="Закрыть меню"
+        />
+      </button>
+
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about">О школе</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#teachers">Тренеры</a></li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#packages">Стоимость</a>
+        </li>
+      </ul>
+    </div>
 
     <main class="main">
       <section class="promo">
@@ -38,7 +66,7 @@
       </section>
     </main>
 
-    <section class="about">
+    <section class="about scroll-section" id="about">
       <div class="container">
         <p class="about__school">
           <b>Robo School</b> – учреждение для формирования кадрового педагогического резерва в сфере
@@ -125,7 +153,7 @@
       </div>
     </section>
 
-    <section class="teachers">
+    <section class="teachers scroll-section" id="teachers">
       <div class="container">
         <h2 class="teachers__title">Профессиональные тренеры</h2>
         <div class="teachers__slider teachers-slider">
@@ -231,7 +259,7 @@
       </div>
     </section>
 
-    <section class="packages">
+    <section class="packages scroll-section-packages" id="packages">
       <div class="container">
         <h3 class="packages__title">Выберите нужный пакет</h3>
         <div class="packages__cards">
@@ -291,18 +319,6 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container container--wide">
-        <div class="footer__content">
-          <div class="footer__text">
-            <a class="logo" href="/">ROBO.SCHOOL</a>
-            <p class="footer__copyright">&copy; ROBO.SCHOOL</p>
-          </div>
-          <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
-        </div>
-      </div>
-    </footer>
-
     <div class="modal">
       <div class="modal__backdrop"></div>
       <div class="modal__content">
@@ -326,11 +342,34 @@
               </div>
             </div>
           </div>
+
           <div class="teacher-modal__tabs teacher-tabs">
             <button class="teacher-tabs__buttons active" data-tab="education">Образование</button>
             <button class="teacher-tabs__buttons" data-tab="experience">Опыт работы</button>
             <button class="teacher-tabs__buttons" data-tab="achievements">Награды</button>
           </div>
+
+          <div class="mobile-tabs">
+            <div class="mobile-tabs__wrapper">
+              <button class="mobile-tabs__button" id="mobileTabSelectBtn" aria-expanded="false">
+                <span class="mobile-tabs__text">Образование</span>
+                <img
+                  class="mobile-tabs__icon"
+                  src="../assets/icons/arrow_down.svg"
+                  alt="arrow-down"
+                />
+              </button>
+
+              <div class="mobile-tabs__dropdown" id="mobileTabDropdown">
+                <button class="mobile-tabs__option selected" data-tab="education">
+                  Образование
+                </button>
+                <button class="mobile-tabs__option" data-tab="experience">Опыт работы</button>
+                <button class="mobile-tabs__option" data-tab="achievements">Награды</button>
+              </div>
+            </div>
+          </div>
+
           <div class="teacher-modal__information teacher-info-tab">
             <div class="teacher-info-tab__content active" data-tab="education">
               <div class="teacher-info-tab__entry entry--no-title">
@@ -346,8 +385,29 @@
               <div class="teacher-info-tab__entry entry--no-title">
                 <div class="teacher-info-tab__title">Курсы и тренинги</div>
                 <p class="teacher-info-tab__text">
-                  Прошла курс 'Машинное обучение и искусственный интеллект' на платформе Coursera.
+                  Приняла участие в тренинге по разработке робототехнических систем в Школе
+                  робототехники и автоматизации.Приняла участие в тренинге по разработке
+                  робототехнических систем в Школе робототехники и автоматизации.Приняла участие в
+                  тренинге по разработке робототехнических систем в Школе робототехники и
+                  автоматизации.Приняла участие в тренинге по разработке робототехнических систем в
+                  Школе робототехники и автоматизации.
                 </p>
+              </div>
+
+              <div class="teacher-info-tab__entry entry--no-title">
+                <div class="teacher-info-tab__title">Курсы и тренинги</div>
+                <p class="teacher-info-tab__text">
+                  Приняла участие в тренинге по разработке робототехнических систем в Школе
+                  робототехники и автоматизации.Приняла участие в тренинге по разработке
+                  робототехнических систем в Школе робототехники и автоматизации.Приняла участие в
+                  тренинге по разработке робототехнических систем в Школе робототехники и
+                  автоматизации.Приняла участие в тренинге по разработке робототехнических систем в
+                  Школе робототехники и автоматизации.
+                </p>
+              </div>
+
+              <div class="teacher-info-tab__entry entry--no-title">
+                <div class="teacher-info-tab__title">Курсы и тренинги</div>
                 <p class="teacher-info-tab__text">
                   Приняла участие в тренинге по разработке робототехнических систем в Школе
                   робототехники и автоматизации.Приняла участие в тренинге по разработке
@@ -384,8 +444,23 @@
           </div>
         </div>
         <button class="modal__close-btn">Закрыть</button>
+        <button class="modal__close-mobile">
+          <img src="../assets/icons/close-mobile-modal.svg" alt="close-image" />
+        </button>
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="container container--wide">
+        <div class="footer__content">
+          <div class="footer__text">
+            <a class="logo" href="/">ROBO.SCHOOL</a>
+            <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
+          </div>
+          <p class="footer__copyright">&copy; ROBO.SCHOOL</p>
+        </div>
+      </div>
+    </footer>
     <!-- Скрипты будут добавлены автоматически -->
   </body>
 </html>
