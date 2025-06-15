@@ -47,3 +47,15 @@ section {
 b {
   font-weight: 700;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-section {
+  scroll-margin-top: 50px;
+}
+
+.scroll-section-packages {
+  scroll-margin-top: 150px;
+}

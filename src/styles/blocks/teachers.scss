@@ -115,19 +115,18 @@
 @media (max-width: 768px) {
   .teachers {
     padding: 60px 0 0 0;
-    overflow-x: hidden;
-
-    .container {
-      margin: 0 -20px;
-      width: calc(100% + 40px);
-    }
 
     &__title {
       text-align: center;
+      margin-bottom: 40px;
     }
 
     .teachers-slider {
+      margin: 0 -20px;
+      width: calc(100% + 40px);
+
       &__items {
+        padding: 0 10px;
         gap: 20px;
       }
     }
@@ -137,10 +136,6 @@
 
       &__image {
         height: 306px;
-      }
-
-      &__name {
-        font-size: 20px;
       }
     }
 

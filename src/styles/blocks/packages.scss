@@ -90,45 +90,49 @@
 @media (max-width: 768px) {
   .packages {
     padding: 60px 0;
+    scroll-margin-top: 50px;
 
     .container {
       padding: 0 10px;
     }
 
     &__title {
-      font-size: 30px;
       text-align: center;
     }
 
     &__cards {
-      margin-top: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
+      margin-top: 40px;
     }
 
     .package-card {
-      max-width: 300px;
-      min-height: 395px;
       padding: 40px 20px;
-      flex-basis: 0;
+      max-width: 300px;
+
+      &:hover {
+        transform: none;
+        background-color: transparent;
+
+        .package-card__name,
+        .package-card__price,
+        .package-card__description {
+          color: $text-color-primary;
+        }
+      }
 
       &__price {
         margin-top: 40px;
-        font-size: 50px;
       }
 
       &__description {
         margin: 20px 0 40px;
-        max-width: 250px;
-        font-size: 16px;
       }
 
       &__button {
-        min-width: 260px;
-        height: 60px;
-        margin: 0;
+        padding: 17px 74.5px;
+        white-space: nowrap;
       }
     }
   }

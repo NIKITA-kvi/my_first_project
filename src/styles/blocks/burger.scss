@@ -12,10 +12,7 @@
   }
 
   &__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 14px 9px;
+    padding: 9px 9px;
     border-radius: 10px;
     background-color: $controls-bg-quaternary;
     border: 1px solid $border-color-secondary;

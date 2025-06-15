@@ -49,25 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  modal.addEventListener('click', (e) => {
-    const isDropdown = dropdown.contains(e.target);
-    const isTabButton = mobileTabBtn.contains(e.target);
-    const isInsideContent = e.target.closest('.teacher-modal');
+  // Закрытие выпадающего списка при клике вне селекта
+  document.addEventListener('click', (e) => {
+    const isClickInsideDropdown = dropdown.contains(e.target);
+    const isClickOnTabBtn = mobileTabBtn.contains(e.target);
 
-    if (isInsideContent && !isDropdown && !isTabButton) {
-      modal.classList.remove('open');
-      document.body.style.overflow = 'auto';
-
-      mobileTabText.textContent = 'Образование';
-
-      tabContents.forEach((content) => {
-        content.classList.toggle('active', content.dataset.tab === 'education');
-      });
-
-      options.forEach((opt) => {
-        opt.classList.toggle('selected', opt.dataset.tab === 'education');
-      });
-
+    if (!isClickInsideDropdown && !isClickOnTabBtn) {
       dropdown.classList.remove('open');
     }
   });
